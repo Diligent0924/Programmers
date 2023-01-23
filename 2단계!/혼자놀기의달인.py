@@ -16,10 +16,11 @@ def solution(cards):
                     count += 1
                     visited[now] = 1
                     now = cards[now] - 1
-        value.append(count)
-    value.sort()
-    print(calue)
-    s1 = value.pop()
-    s2 = value.pop()
-    print(value)
-    return s1 * s2
+            value.append(count)
+    if len(value) == 1:
+        return 0
+    else:
+        value.sort()
+        s1 = value.pop()
+        s2 = value.pop()
+        return s1 * s2
